@@ -1,0 +1,14 @@
+flask
+google-genai
+pydantic
+feedparser
+beautifulsoup4
+requests
+python-dotenv
+tenacity
+ratelimit
+python-dotenv
+resend
+gunicorn 
+waitress
+apscheduler

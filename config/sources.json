@@ -1,0 +1,11 @@
+{
+  "rss_feeds": [
+    "https://openai.com/news/rss.xml",
+    "https://machinelearning.apple.com/rss.xml",
+    "https://deepmind.google/blog/rss.xml"
+  ],
+  "blogs": [
+    "https://techcrunch.com/category/artificial-intelligence/"
+  ]
+}
+

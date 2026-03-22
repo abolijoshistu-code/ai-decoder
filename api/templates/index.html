@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Jargon Decoder | Simple. Classic. Clear.</title>
+    
+    <!-- Classic Typography: Playfair for headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --card-bg: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #64748b;
+            --accent: #2563eb;
+            --border-color: #efefef;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Header & Search Bar */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .search-area {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            display: flex;
+            background: white;
+            padding: 8px;
+            border-radius: 50px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .search-area input {
+            flex: 1;
+            border: none;
+            padding: 10px 25px;
+            font-size: 1rem;
+            outline: none;
+            border-radius: 50px;
+        }
+
+        .search-area button {
+            background: var(--text-main);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .search-area button:hover {
+            background: var(--accent);
+        }
+
+        /* Section Labels */
+        .section-label {
+            text-align: center;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        /* Featured / TOD Card Styling */
+        .tod-wrapper {
+            max-width: 850px;
+            margin: 0 auto 80px;
+        }
+
+        /* Grid for Archive */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* Unified Card Component */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 35px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            border-color: #ddd;
+        }
+
+        .card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 0 0 15px 0;
+            font-style: italic;
+        }
+
+        .card-summary {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* Expandable Content */
+        .more-content {
+            display: none;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid var(--border-color);
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .details-label {
+            font-weight: 600;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 8px;
+            margin-top: 15px;
+        }
+
+        .analogy-section {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            font-style: italic;
+            margin: 15px 0;
+            font-size: 0.95rem;
+            color: #475569;
+            border-left: 3px solid var(--text-main);
+        }
+
+        /* Interaction Buttons */
+        .btn-toggle {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            align-self: flex-start;
+            transition: var(--transition);
+            margin-top: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .btn-toggle:hover {
+            border-color: var(--text-main);
+            background: var(--text-main);
+            color: white;
+        }
+
+        /* Subscription Box */
+        .subscribe-box {
+            margin-top: 100px;
+            padding: 60px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 80px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .grid { grid-template-columns: 1fr; }
+            .subscribe-box { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- HEADER -->
+    <header>
+        <h1>Jargon Decoder</h1>
+        <div class="subtitle">AI technical terms, simplified for the curious mind.</div>
+        
+        <form action="/search" method="get" class="search-area">
+            <input type="text" name="q" placeholder="Enter an AI term to decode..." value="{{ search_query or '' }}" autocomplete="off">
+            <button type="submit">Decode</button>
+        </form>
+    </header>
+
+    <!-- FEATURED / SEARCH RESULT SECTION -->
+    {% if tod %}
+    <div class="section-label">
+        {% if search_query %} Search Result {% else %} Term of the Day {% endif %}
+    </div>
+    
+    <div class="tod-wrapper">
+        <div class="card" style="border-left: 6px solid var(--text-main);">
+            <div>
+                <h2>{{ tod.title }}</h2>
+                <div class="card-summary">{{ tod.summary }}</div>
+            </div>
+
+            <!-- Auto-expand if it is a specific search result or detail view -->
+            <div class="more-content" id="content-tod" style="display: block;">
+                <span class="details-label">Deep Dive</span>
+                <p>{{ tod.explanation }}</p>
+                
+                <span class="details-label">The Analogy</span>
+                <div class="analogy-section">
+                    “{{ tod.analogy }}”
+                </div>
+                
+                <span class="details-label">Practical Example</span>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">{{ tod.example }}</p>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <button class="btn-toggle" onclick="toggleDetails(this, 'content-tod')">Close Details</button>
+                <a href="/concept/{{ tod.slug }}" class="btn-toggle">Permalink</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- ARCHIVE GRID -->
+    {% if concepts %}
+    <div class="section-label" style="margin-top: 60px; color: var(--text-muted);">
+        Archive Dictionary
+    </div>
+
+    <div class="grid">
+        {% for c in concepts %}
+        <div class="card">
+            <div>
+                <h2>{{ c.title }}</h2>
+                <div class="card-summary">{{ c.summary }}</div>
+            </div>
+
+            <div class="more-content" id="content-{{ loop.index }}">
+                <span class="details-label">Explanation</span>
+                <p style="font-size: 0.95rem;">{{ c.explanation }}</p>
+                
+                <div class="analogy-section" style="font-size: 0.85rem; padding: 12px;">
+                    "{{ c.analogy }}"
+                </div>
+                
+                <span class="details-label">Example</span>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">{{ c.example }}</p>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <button class="btn-toggle" onclick="toggleDetails(this, 'content-{{ loop.index }}')">Learn More</button>
+                <a href="/concept/{{ c.slug }}" class="btn-toggle">Link</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- NEWSLETTER SUBSCRIPTION -->
+    <div class="subscribe-box">
+        <h2 style="font-family: 'Playfair Display', serif; margin-top: 0;">Weekly Decode</h2>
+        <p style="color: var(--text-muted); margin-bottom: 30px;">Join 5,000+ readers getting one AI concept decoded in their inbox.</p>
+        
+        <form action="/subscribe" method="post" style="display: flex; gap: 12px; justify-content: center; max-width: 450px; margin: 0 auto; flex-wrap: wrap;">
+            <input type="email" name="email" placeholder="Email address" required 
+                   style="flex: 1; min-width: 250px; padding: 14px 25px; border-radius: 50px; border: 1px solid var(--border-color); outline: none;">
+            <button type="submit" style="background: var(--text-main); color: white; border: none; padding: 14px 35px; border-radius: 50px; cursor: pointer; font-weight: 600;">
+                Join List
+            </button>
+        </form>
+    </div>
+
+    <footer>
+        {% if search_query or is_detail %}
+            <a href="/" style="text-decoration: none; color: var(--accent); font-weight: 600;">← Back to All Concepts</a>
+        {% else %}
+            &copy; 2025 AI Simplified | Built with Gemini 2.0 & Resend
+        {% endif %}
+    </footer>
+</div>
+
+<script>
+    /**
+     * Toggles the visibility of the card details.
+     */
+    function toggleDetails(btn, contentId) {
+        const content = document.getElementById(contentId);
+        const isHidden = content.style.display === "none" || content.style.display === "";
+        
+        if (isHidden) {
+            content.style.display = "block";
+            btn.innerText = "Close Details";
+        } else {
+            content.style.display = "none";
+            btn.innerText = "Learn More";
+        }
+    }
+</script>
+
+</body>
+</html>

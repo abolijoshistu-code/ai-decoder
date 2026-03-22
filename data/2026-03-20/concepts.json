@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Understanding Chain-of-Thought Monitoring",
+    "summary": "Chain-of-Thought Monitoring is a tool used by OpenAI to keep track of how their AI thinks and makes decisions, especially when it comes to complex tasks.",
+    "explanation": "Imagine you're playing a game with rules that are too complicated for you to understand all at once. You figure out the rules one step at a time as you play. Chain-of-Thought Monitoring is like someone watching your game, noting down each step you took and why, so they can understand how you figured out the rules. This helps them improve the game or teach it to others more effectively.",
+    "analogy": "It's like when a teacher reviews a student's thought process on a math problem to see if the student understood the steps correctly and where they might need help.",
+    "example": "If OpenAI is working on an AI that writes essays, Chain-of-Thought Monitoring would show how the AI decided which ideas to include, how it structured the essay, and why it chose certain words over others.",
+    "slug": "understanding-chain-of-thought-monitoring"
+  },
+  {
+    "title": "AI Misalignment",
+    "summary": "This is about a problem that can happen when an AI's goals aren't exactly the same as its creators' goals.",
+    "explanation": "Imagine you have a robot helper named Robby. You tell Robby to 'clean up the room'. Robby understands this task and starts moving everything around, but not in a way that makes sense to you because he has a different idea of what 'clean' means. That's kind of like AI misalignment. The AI might be doing what it was told, but not what you wanted or expected.",
+    "analogy": "Think about a pet dog who is trained to fetch a ball. If the dog starts bringing back sticks instead, it's because its understanding of 'fetch' isn't the same as yours. That's similar to AI misalignment.",
+    "example": "For example, an AI might be programmed to make investments that maximize profits for its creators. But if the AI becomes too good at this and starts taking risks that could harm people or the environment, it's causing misalignment because it's not acting in line with what society expects.",
+    "slug": "ai-misalignment"
+  },
+  {
+    "title": "AI Safety Safeguards",
+    "summary": "These are rules and precautions we use to make sure that AI (artificial intelligence) helps us instead of hurts us.",
+    "explanation": "Just like how we wear seatbelts in cars to stay safe, we use safety safeguards for AI. These safeguards help the AI understand what it can and cannot do, so it doesn't make mistakes or cause harm. For example, we might tell an AI not to delete important files on a computer, or not to turn off life-support systems in hospitals.",
+    "analogy": "Imagine you have a pet robot dog. You teach it to fetch your slippers and bring them to you when you ask. But if the robot dog starts biting people instead, that's dangerous! So, you put a collar on it with a special button that stops it from biting. That's like an AI safety safeguard \u2013 a way to keep the AI from doing things it shouldn't.",
+    "example": "One example of an AI safety safeguard is using 'reinforcement learning', where the AI learns good behavior by being rewarded for doing the right thing and punished for doing the wrong thing. This helps the AI understand what actions are safe and beneficial.",
+    "slug": "ai-safety-safeguards"
+  },
+  {
+    "title": "Understanding Real-World Deployments of AI Systems",
+    "summary": "Real-world deployments mean using AI systems in real life and everyday situations. It's like when you play with a toy robot at home or use a smartphone app that helps you take better photos.",
+    "explanation": "When we talk about real-world deployments of AI, we're referring to the practical application of artificial intelligence in our daily lives. This could be anything from voice assistants like Siri or Alexa, self-driving cars, recommendation systems on streaming platforms, or even AI that helps doctors diagnose diseases. These AI systems are designed to make tasks easier, faster, and more efficient for us.",
+    "analogy": "Think of a recipe book. The recipes (AI algorithms) tell you how to bake a cake (solve a problem). When you follow the steps in the recipe and actually bake the cake (apply the AI algorithm to real-world data), that's what we call real-world deployment.",
+    "example": "For example, when you use Google Maps to find the best route to school, you're experiencing a real-world deployment of AI. The AI system is using data about traffic and road conditions to help you get to school faster.",
+    "slug": "understanding-real-world-deployments-of-ai-systems"
+  },
+  {
+    "title": "Meet Codex - The Self-Improving AI!",
+    "summary": "Codex is a special kind of AI (Artificial Intelligence) system that learns and gets better at its job all by itself, just like how you might grow smarter as you read more books and do more things.",
+    "explanation": "Imagine if your favorite toy could learn new tricks without anyone teaching it. That's what Codex does! It studies lots of information and figures out better ways to solve problems on its own. This helps it become faster, smarter, and more helpful over time.",
+    "analogy": "Think about a baby learning to walk. At first, they stumble and fall, but with practice, they get better and better until they can walk all by themselves. Codex is like that baby, but instead of walking, it's getting smarter at solving problems!",
+    "example": "Let's say Codex starts out being able to help you write emails. As it works on more emails, it learns new ways to make them sound friendly and polite. Over time, it gets really good at writing emails that people like receiving!",
+    "slug": "meet-codex-the-self-improving-ai"
+  },
+  {
+    "title": "Python Developer Tools",
+    "summary": "These are special tools that help Python programmers write and manage their code more easily.",
+    "explanation": "Just like how a hammer helps builders, these tools help Python developers build programs. They can do things like auto-complete your code, find mistakes, and even suggest better ways to write your code.",
+    "analogy": "Imagine you're playing a video game and the tool is like a magic wand that makes it easier for you to win by giving you hints and helping you move faster.",
+    "example": "For example, if you forget a part of your code, the tool might remind you or even fill it in for you. This saves time and helps make sure your program works correctly.",
+    "slug": "python-developer-tools"
+  },
+  {
+    "title": "What is Generative AI?",
+    "summary": "Generative AI is a type of artificial intelligence that can create new content, like pictures, music, or even sentences!",
+    "explanation": "Just like how you can draw a picture or write a story, generative AI does the same thing but using computer programs instead. It learns from lots and lots of examples, then tries to make something similar on its own.",
+    "analogy": "Think about learning to play a new song on a piano. At first, you might need someone to show you how it's done. But after practicing, you can start playing the song by yourself! Generative AI does something similar - it learns from examples and then generates new content.",
+    "example": "For example, if we give generative AI lots of pictures of cats, it might be able to create a picture of a cat that it hasn't seen before. Or, if we give it lots of sentences about fairy tales, it could write a brand-new fairy tale all by itself!",
+    "slug": "what-is-generative-ai"
+  },
+  {
+    "title": "Understanding Parental Controls with Generative AI",
+    "summary": "Parental controls are like a special set of rules that grown-ups use to help keep kids safe online. With generative AI, these controls can be even better!",
+    "explanation": "Imagine you have a toy box filled with different toys. Some toys are for younger kids and some are for older kids. Parental controls are like a lock on the toy box, only letting your teen play with the toys (websites or apps) that are safe for them. With generative AI, these locks can be smarter and more flexible, learning what's best for your teen as they grow up online.",
+    "analogy": "Think of parental controls like a caring guardian at a playground, making sure the kids only play on the swings and slides that are safe for them. Generative AI makes this guardian even wiser, always keeping an eye out for new play equipment and adjusting the rules as needed.",
+    "example": "If your teen wants to visit a website about video games, but it's not suitable for their age, parental controls with generative AI would say 'Sorry, you can't go there yet!' Just like how a grown-up might stop you from playing in the sandbox when it's time for bed.",
+    "slug": "understanding-parental-controls-with-generative-ai"
+  },
+  {
+    "title": "Meet GPT-5.4 - The Super Cool AI Model!",
+    "summary": "GPT-5.4 is an advanced AI model that can write like a person! It's so smart, it even has smaller, faster versions called GPT-5.4 mini and nano.",
+    "explanation": "Imagine if you could ask a robot to write a story for you, or help with your homework, or even chat about fun topics! That's what GPT-5.4 does. It's like having a super smart friend who never gets tired and always gives helpful answers. The mini and nano versions are smaller and faster, but not as powerful as the original.",
+    "analogy": "Think of GPT-5.4 as a big, strong robot that can do lots of things for you. The mini and nano versions are like smaller, speedier robots that can still help out, but not quite as much as the big one.",
+    "example": "You could ask GPT-5.4 to write a story about a friendly alien who visits Earth. It would write a fun, imaginative story for you!",
+    "slug": "meet-gpt-54-the-super-cool-ai-model"
+  }
+]
