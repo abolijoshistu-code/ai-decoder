@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Model Spec",
+    "summary": "It's like a rulebook or a set of instructions for how a super-smart computer program (an AI model) should act, making sure it's safe, helpful, and fair for everyone.",
+    "explanation": "Imagine you have a very clever robot. The 'Model Spec' is like the list of rules and guidelines you give that robot so it knows what it should and shouldn't do. It tells the robot things like 'always be polite,' 'don't say mean things,' 'try to help people,' and 'don't do anything dangerous.' It's a way for the people who made the robot to make sure it behaves well for everyone, balancing being useful with being safe and responsible.",
+    "analogy": "Think of it like the instruction manual and safety rules for a new toy or a game. When you get a new toy, it comes with rules about how to play with it safely and what it's supposed to do. The Model Spec is similar for an AI model \u2013 it's the rules for how it should operate and what its boundaries are, so it doesn't break or hurt anyone.",
+    "example": "If you ask an AI model to tell you how to build a dangerous bomb, the Model Spec would have a rule that says, 'Do not give instructions for harmful activities.' So, instead of telling you how, the AI would say something like, 'I cannot help with that request because it could be dangerous.' Or, if you ask it to write a story, the Model Spec might say, 'Be creative and helpful, but don't write stories that are mean or unfair to anyone.'",
+    "slug": "model-spec"
+  }
+]

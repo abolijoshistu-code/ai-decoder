@@ -1,50 +1,48 @@
 import os
 import sys
 import logging
-from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.schedulers.background import BlockingScheduler
 from datetime import datetime
 
-# 1. FIX PATHING
+# Fix pathing to find main.py
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
-# 2. IMPORT YOUR PIPELINE
 from main import run_daily_pipeline
 
-# 3. SETUP LOGGING
+# Setup Logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [CLOCK] %(message)s',
-    handlers=[
-        logging.FileHandler("scheduler.log", encoding='utf-8'),
-        logging.StreamHandler(sys.stdout)
-    ]
+    handlers=[logging.FileHandler("scheduler.log"), logging.StreamHandler()]
 )
 
 def scheduled_job():
-    """Triggered every 2 minutes for testing."""
-    logging.info("--- ⏰ TEST TRIGGER: Starting Pipeline ---")
+    logging.info("--- ⏰ CRON TRIGGERED: Starting Daily Pipeline ---")
     try:
         run_daily_pipeline()
-        logging.info("--- ✅ SUCCESS: Pipeline finished. Waiting 2 minutes... ---")
+        logging.info("--- ✅ CRON FINISHED: Daily Pipeline Success ---")
     except Exception as e:
-        logging.error(f"--- ❌ ERROR: {str(e)} ---")
+        logging.error(f"--- ❌ CRON FAILED: {str(e)} ---")
 
 if __name__ == "__main__":
     scheduler = BlockingScheduler()
 
-    # TEST SCHEDULE: Run immediately, then every 2 minutes
-    scheduler.add_job(
-        scheduled_job, 
-        'interval', 
-        minutes=2, 
-        next_run_time=datetime.now() # Runs immediately on start
-    )
+    # SCHEDULE: Every day at 09:00 AM
+    # You can change this to hours=24 or a specific time
+    scheduler.add_job(scheduled_job, 'cron', hour=9, minute=0)
+    
+    # FOR TESTING: Uncomment the line below to run every 5 minutes
+    # scheduler.add_job(scheduled_job, 'interval', minutes=5)
 
-    logging.info("TEST MODE: Scheduler started. Running every 2 minutes.")
+    logging.info("Scheduler started. Waiting for next trigger at 09:00 AM daily...")
     
     try:
         scheduler.start()
     except (KeyboardInterrupt, SystemExit):
-        logging.info("Test stopped.")
+        logging.info("Scheduler stopped.")
+        
+        
+        
+        

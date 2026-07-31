@@ -2,10 +2,14 @@
   "rss_feeds": [
     "https://openai.com/news/rss.xml",
     "https://machinelearning.apple.com/rss.xml",
-    "https://deepmind.google/blog/rss.xml"
+    "https://deepmind.google/blog/rss.xml",
+    "https://www.anthropic.com/news/rss.xml",
+    "https://engineering.fb.com/category/ai/feed/",
+    "https://huggingface.co/blog/feed.xml"
   ],
   "blogs": [
-    "https://techcrunch.com/category/artificial-intelligence/"
+    "https://techcrunch.com/category/artificial-intelligence/",
+    "https://www.zendesk.com/in/blog/generative-ai-glossary/#georedirect"
   ]
 }
 
